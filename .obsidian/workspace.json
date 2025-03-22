@@ -181,8 +181,11 @@
   },
   "active": "26b93dda9b8c6967",
   "lastOpenFiles": [
-    "img/Decision 1.md",
+    "Logistic Regression.md",
+    "Linear Regression.md",
     "Decision Trees.md",
+    "README.md",
+    "img/Decision 1.md",
     "img/Decision.md",
     "img/Decision 2.md",
     "img/Decision Trees/img_01.avif",
@@ -190,9 +193,6 @@
     "img/decision_tree_for_heart_attack_prevention_2140bd762d.avif.crdownload",
     "img",
     "Ensemble Methods/XGBoost.md",
-    "Linear Regression.md",
-    "README.md",
-    "Logistic Regression.md",
     "Ensemble Methods/Random Forests.md",
     "Ensemble Methods"
   ]
