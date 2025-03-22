@@ -23,9 +23,11 @@ __Inputs:__
 	Training set $D = \{ (x_{0}, y_{0}), (x_{1}, y_{1}), \ldots (x_{m}, y_{m}) \}$ 
 	 Feature set $A = \{ a_{1}, a_{2}  \ldots a_{d} \}$
 	
- __Process:__
-	 
-
+__Process:__
+	$\text{Function } TreeGenerator(D, A$)
+	Generate node $i$;
+	__IF__ $A = \emptyset$ __OR__ all samples in $D$ take the same value on $A$ __THEN__
+		Mark node $i$ as class $C$
 
 ## Split Selection
 ## Pruning
