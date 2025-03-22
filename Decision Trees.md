@@ -20,7 +20,8 @@ Below is the algorithm used to train a decision tree.
 __Decision Tree Algorithm__: 
 
 __Inputs:__
-> Training set $D = \{ (x_{0}, y_{0}), (x_{1}, y_{1}), \ldots (x_{m}, y_{m}) \}$ <br>
+> Training set $D = \{ (x_{0}, y_{0}), (x_{1}, y_{1}), \ldots (x_{m}, y_{m}) \}$ 
+> 
 > Feature set $A = \{ a_{1}, a_{2}  \ldots a_{d} \}$
 
 
