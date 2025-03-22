@@ -24,7 +24,7 @@ __Decision Tree Algorithm__:
 > 
 > Feature set $A = \{ a_{1}, a_{2}  \ldots a_{d} \}$
 > 
-__Process:__
+> __Process:__
 
 
 
