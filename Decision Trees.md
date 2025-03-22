@@ -17,10 +17,12 @@ In a DT, the root and intermediate nodes correspond to a feature in a feature se
 ## Basic process
 Below is the algorithm used to train a decision tree.
 
-__Decision Tree Algorithm__:
+__Decision Tree Algorithm__: 
+
 __Inputs:__
-	Training set $D = \{ (x_{0}, y_{0}), (x_{1}, y_{1}), \ldots (x_{m}, y_{m}) \}$
-	Feature set $A = \{ a_{1}, a_{2}  \ldots a_{d} \}$
+
+> Training set $D = \{ (x_{0}, y_{0}), (x_{1}, y_{1}), \ldots (x_{m}, y_{m}) \}$ 
+> Feature set $A = \{ a_{1}, a_{2}  \ldots a_{d} \}$
 
 
 ## Split Selection
