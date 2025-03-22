@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c90a701aa8f88260",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
             "id": "26b93dda9b8c6967",
             "type": "leaf",
             "state": {
@@ -34,37 +20,8 @@
               "icon": "lucide-file",
               "title": "Decision Trees"
             }
-          },
-          {
-            "id": "20c2f7b989f7b274",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ensemble Methods/XGBoost.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "XGBoost"
-            }
-          },
-          {
-            "id": "257a5aafa1d57f3f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ensemble Methods/Random Forests.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Random Forests"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "311b8ff94f4d8b47",
@@ -222,13 +179,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9565f53e6ccf5a05",
+  "active": "26b93dda9b8c6967",
   "lastOpenFiles": [
-    "Ensemble Methods",
-    "Ensemble Methods/XGBoost.md",
-    "Ensemble Methods/Random Forests.md",
+    "img/Decision 1.md",
     "Decision Trees.md",
+    "img/Decision.md",
+    "img/Decision 2.md",
+    "img/Decision Trees/img_01.avif",
+    "img/Decision Trees",
+    "img/decision_tree_for_heart_attack_prevention_2140bd762d.avif.crdownload",
+    "img",
+    "Ensemble Methods/XGBoost.md",
+    "Linear Regression.md",
     "README.md",
-    "Untitled"
+    "Logistic Regression.md",
+    "Ensemble Methods/Random Forests.md",
+    "Ensemble Methods"
   ]
 }
