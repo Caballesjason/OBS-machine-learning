@@ -45,13 +45,17 @@ Before we can talk about Information Gain, we must talk about Information Entrop
 Let $p_{k}$ denote the proportion of examples in the $k^{\text{th}}$ class of our dataset $D$, where $k = 1, 2, \ldots, |y|$, and $|y|$ is the total number of distinct classes.  Then entropy is defined as 
 
 $$
+\begin{equation}
 Ent(D) = - \sum^{|y|}_{k=1}{p_{k}\log_{2}{p_{k}}}
+\end{equation}
 $$
 
 where
 
 $$
+\begin{equation}
 0 \leq Ent(D) \leq \log_{2}{|y|}
+\end{equation}
 $$
 
 The lower the value for $Ent(D)$, the higher the purity of $D$.  If we have a discrete feature, $a$, with $V$ possible values $\{ a^{0}, a^{2}, \ldots, a^{V} \}$, then we can create $V$ child nodes from this feature's node.  We can then compute the proportion of examples in $D$ that are placed in each child node, $\frac{|D^{v}|}{|D|}$.  This proportion explains the importance of this node in the model and will allow us to calculate the information gain from this node.
@@ -59,7 +63,9 @@ The lower the value for $Ent(D)$, the higher the purity of $D$.  If we have a di
 The information gain of a node is defined as
 
 $$
+\begin{equation}
 Gain(D, a) = Ent(D) - \sum^{V}_{v=1}{\frac{|D^{V}|}{|D|}Ent(D^{v})}
+\end{equation}
 $$
 
 For some feature $a$ and dataset $D$.
@@ -74,7 +80,28 @@ __Note:__
 > Information Gain is biased towards features that contain a lot of possible values.  If a feature has a lot of values, then the proportion of examples being placed in each node, $\frac{|D^{v}|}{|D|}$, will be very small.  This will lead to a high purity.
 
 ### Gain Ratio
-To handle the bias obtained from Information Gain, we can use a Gain Ratio
+To handle the bias obtained from Information Gain, we can use a Gain Ratio.  The Gain Ratio is defined as 
+
+$$
+\begin{equation}
+Gain\_Ratio(D, a) = \frac{Gain(D, a)}{IV(a)}
+\end{equation}
+$$
+
+where
+
+$$
+\begin{equation}
+IV(a) = -\sum_{v=1}^{V}{\frac{|D^{V}|}{|D|} \log_{2} \frac{|D^{V}|}{|D|}}
+\end{equation}
+$$
+
+$IV$ is short for _Intrinsic Value_ of a feature $a$.  $IV(a)$ is large when feature $a$ has many possible values and small when $a$ has only a few possible values.
+
+__Note:__
+> Gain Ratio is biased towards features that contain only a few possible values.  If a feature has only a few values, then the proportion of examples being placed in each node, $\frac{|D^{v}|}{|D|}$, will be very small, making the Gain Ratio small.
+
+
 ### Gini Index
 ## Pruning
 ## Continuous and Missing Values
