@@ -42,11 +42,11 @@ There are three types of split formulas we will discuss
 ### Information Gain
 Before we can talk about Information Gain, we must talk about Information Entropy, or Entropy for short. Entropy is a great measure of purity.
 
-Let $p_{k}$ denote the proportion of examples in the $k^{\text{th}}$ class of our dataset $D$, where $k = 1, 2, \ldots, |y|$, and $|y|$ is the total number of distinct classes.  Then entropy is defined as 
+Let $p_{k}$ denote the proportion of examples in the $k^{\text{th}}$ class of our dataset $D$, where $k = 1, 2, \ldots, |\mathcal{y}|$, and $|y|$ is the total number of distinct classes.  Then entropy is defined as 
 
 $$
 \begin{equation}
-Ent(D) = - \sum^{|y|}_{k=1}{p_{k}\log_{2}{p_{k}}}
+Ent(D) = - \sum^{|\mathcal{y}|}_{k=1}{p_{k}\log_{2}{p_{k}}}
 \end{equation}
 $$
 
@@ -54,7 +54,7 @@ where
 
 $$
 \begin{equation}
-0 \leq Ent(D) \leq \log_{2}{|y|}
+0 \leq Ent(D) \leq \log_{2}{|\mathcal{y}|}
 \end{equation}
 $$
 
@@ -64,7 +64,7 @@ The information gain of a node is defined as
 
 $$
 \begin{equation}
-Gain(D, a) = Ent(D) - \sum^{V}_{v=1}{\frac{|D^{V}|}{|D|}Ent(D^{v})}
+Gain(D, a) = Ent(D) - \sum^{V}_{v=1}{\frac{|D^{V}|}{|D|} \cdot Ent(D^{v})}
 \end{equation}
 $$
 
@@ -103,6 +103,24 @@ __Note:__
 
 
 ### Gini Index
+The _Gini Value_ of a dataset, $D$, represents the likelihood that two randomly selected examples from $D$ belong to different classes.  Mathematically, the Gini Value is defined as
+
+$$
+\begin{equation}
+Gini(D) = \sum_{k = 1}^{|\mathcal{y}|}{\sum_{k' \neq k}{p_{k}p'_{k}} = 1 - \sum_{k=1}^{|\mathcal{y}|}{p^{2}_{k}}}
+\end{equation}
+$$
+
+The _Gini Index_ split selection formula for DTs is defined as
+
+$$
+\begin{equation}
+Gini\_Index(D, a) = \sum_{v=1}^{V}{\frac{|D^{V}|}{|D|} \cdot Gini(D)}
+\end{equation}
+$$
+
+The Gini Index can be used in both cases of features that can have a lot of values or features that can only have few values.
+
 ## Pruning
 ## Continuous and Missing Values
 ## Multivariate Decision Trees
