@@ -122,5 +122,8 @@ $$
 The Gini Index can be used in both cases of features that can have a lot of values or features that can only have few values.
 
 ## Pruning
+### Pre-pruning
+
+### Post-pruning
 ## Continuous and Missing Values
 ## Multivariate Decision Trees
