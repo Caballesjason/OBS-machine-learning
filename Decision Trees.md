@@ -54,7 +54,7 @@ $$
 0 \leq Ent(D) \leq \log_{2}{|y|}
 $$
 
-The lower value for $Ent(D)$, the higher the purity of $D$.  If we have a discrete feature, $a$, with $V$ possible values $\{ a^{0}, a^{2}, \ldots, a^{V} \}$, then when making a decision tree, we can create $V$ child nodes from this feature's node.  We can then compute the proportion of examples in $D$ that are placed in each child node, $\frac{|D^{v}|}{|D|}$, and find its proportion.  This proportion explains the importance of this node in the model.  This proportion will also allow us to calculate the information gain from this node.
+The lower the value for $Ent(D)$, the higher the purity of $D$.  If we have a discrete feature, $a$, with $V$ possible values $\{ a^{0}, a^{2}, \ldots, a^{V} \}$, then we can create $V$ child nodes from this feature's node.  We can then compute the proportion of examples in $D$ that are placed in each child node, $\frac{|D^{v}|}{|D|}$.  This proportion explains the importance of this node in the model and will allow us to calculate the information gain from this node.
 
 The information gain of a node is defined as
 
@@ -64,7 +64,7 @@ $$
 
 For some feature $a$ and dataset $D$.
 
-Remember, the lower entropy for a dataset $Ent(D)$, the higher the purity of $D$.  Therefore, the higher the information gain for a feature, the more purity we can achieve when splitting $D$ by that feature. Therefore when creating a DT, for each node, we aim to find $a_{*}$, such that
+Remember, the lower the entropy for a dataset, $Ent(D)$, the higher the purity of $D$.  Therefore, the higher the information gain for a feature, the more purity we can obtain when splitting $D$ by that feature. Therefore when creating a DT, for each node, we aim to find $a_{*}$, or the feature that maximizes information gain.  Mathematically, this is denoted as
 
 $$
 a_{*} = \underset{a \in A}{\arg\max} \text{ } Gain(D, a)
