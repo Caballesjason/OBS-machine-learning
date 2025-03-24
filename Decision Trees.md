@@ -70,9 +70,11 @@ $$
 a_{*} = \underset{a \in A}{\arg\max} \text{ } Gain(D, a)
 $$
 
-
+__Note:__
+> Information Gain is biased towards features that contain a lot of possible values.  If a feature has a lot of values, then the proportion of examples being placed in each node, $\frac{|D^{v}|}{|D|}$, will be very small.  This will lead to a high purity.
 
 ### Gain Ratio
+To handle the bias obtained from Information Gain, we can use a Gain Ratio
 ### Gini Index
 ## Pruning
 ## Continuous and Missing Values
