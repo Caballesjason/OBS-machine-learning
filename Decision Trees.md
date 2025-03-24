@@ -2,9 +2,9 @@
 
 
 ## Overview
-A Decision Tree (DT) is a machine learning model that is created by a divide and conquer algorithm.  They are great for its quick computation and interpretability.
+A Decision Tree (DT) is a machine learning model that is created by a divide and conquer algorithm.  They are great when you need quick computation and interpretability.
 
-In a DT, the root and intermediate nodes correspond to a feature in a feature set having each edge indication a decision, or a value an example can take on for a feature (categorical values or bins for numerical values). The leaf nodes represent your target values (classes in a classification task and binned numerical values for regression). 
+In a DT, the root and intermediate nodes correspond to a feature in a feature set, with it's edges indicating possible values for that feature. The leaf nodes represent your target values (classes in a classification task and binned numerical values for regression). 
 
 |              When to use Decision Trees               |             When Not to use Decision Trees              |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
@@ -31,7 +31,7 @@ __Process:__
 
 %% Complete algorithm later using the pseudocode plugin%%
 ## Split Selection
-For every split (branching of each intermediate node), we must select some formula to decide what examples go to each branch.  Each formula must maximize __purity__, which how well we partition classes in each node.
+Before we decide what feature to use for a node, we need to decide on a formula to use to select the feature that maximizes __purity__, which how well we partition target values in each node.
 
 There are three types of split formulas we will discuss
 
@@ -40,7 +40,7 @@ There are three types of split formulas we will discuss
 3. Gini Index
 
 ### Information Gain
-Before we can talk about Information Gain, we must talk about Information Entropy, or entropy for short. Entropy is a great measure of purity.
+Before we can talk about Information Gain, we must talk about Information Entropy, or Entropy for short. Entropy is a great measure of purity.
 
 Let $p_{k}$ denote the proportion of examples in the $k^{\text{th}}$ class of our dataset $D$, where $k = 1, 2, \ldots, |y|$, and $|y|$ is the total number of distinct classes.  Then entropy is defined as 
 

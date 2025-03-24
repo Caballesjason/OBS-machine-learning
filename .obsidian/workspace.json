@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e5324c54ed67a222",
+        "id": "e4a512b7e07b078d",
         "type": "tabs",
         "children": [
           {
-            "id": "26b93dda9b8c6967",
+            "id": "ec96a06798aff51e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -179,11 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "26b93dda9b8c6967",
+  "active": "ec96a06798aff51e",
   "lastOpenFiles": [
-    "Logistic Regression.md",
-    "Linear Regression.md",
     "Decision Trees.md",
+    "Linear Regression.md",
+    "Logistic Regression.md",
     "README.md",
     "img/Decision 1.md",
     "img/Decision.md",
