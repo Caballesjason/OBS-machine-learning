@@ -11,10 +11,14 @@
             "id": "c27366623b0d4dd5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Decision Trees.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Decision Trees"
             }
           }
         ]
@@ -177,9 +181,9 @@
   },
   "active": "c27366623b0d4dd5",
   "lastOpenFiles": [
-    "Decision Trees.md",
     "Linear Regression.md",
     "Logistic Regression.md",
+    "Decision Trees.md",
     "README.md",
     "img/Decision 1.md",
     "img/Decision.md",

@@ -122,6 +122,10 @@ $$
 The Gini Index can be used in both cases of features that can have a lot of values or features that can only have few values.
 
 ## Pruning
+The recursive nature of the DT training makes them very prone to overfitting.  Training a DT doesn't stop until all examples are classified, therefore we introduce pruning which is the action of removing branches depending on the improvement of purity.
+
+There are two types of pruning strategies, pre-pruning and post-pruning.
+
 ### Pre-pruning
 
 ### Post-pruning
