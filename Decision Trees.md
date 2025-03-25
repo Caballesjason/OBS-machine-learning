@@ -137,5 +137,9 @@ Here is a visual example of the pre-pruning process
 
 
 ### Post-pruning
+When post-pruning, the entire tree is trained, then branches are pruned if the model's performance improves.  The model performance is evaluated on using a validation set (cross validation or leave one out validation).  In other words, we will consider each intermediate node, starting from the parent node of a leaf node.  If pruning the parent node (making the parent node a leaf node) does not reduce the model validation performance, then the parent node gets pruned.  We then continue traversing the DT's intermediate nodes until we obtain the best performing model.
+
+While post-pruning is less susceptible to underfitting and typically generalizes a DT better than pre-pruning, it is also more computationally expensive since it must first train the model, then traverse the tree in a bottom-up fashion.
+
 ## Continuous and Missing Values
 ## Multivariate Decision Trees
