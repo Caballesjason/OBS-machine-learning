@@ -127,6 +127,14 @@ The recursive nature of the DT training makes them very prone to overfitting.  T
 There are two types of pruning strategies, pre-pruning and post-pruning.
 
 ### Pre-pruning
+  When pre-pruning a tree, the model is evaluated for some performance metric at a given node. We then split the node to its potential child nodes, and then we evaluate if these nodes improve the model.  If the model's performance improves, then the child nodes stay in the DT.  If the model's performance does not improve, then the child nodes are connected to the tree.   If the child nodes do connect to the DT, this process gets repeated for each child.
+
+Since this process avoids training and traversing to future possible children, we are less prone to overfitting.  However, there is a chance that subsequent child node will yield better performance.  In other words, pre-pruning is susceptible to underfitting.
+
+Here is a visual example of the pre-pruning process
+
+![Pre-pruning Example](img/Decision%20Trees/img_02.png)
+
 
 ### Post-pruning
 ## Continuous and Missing Values
