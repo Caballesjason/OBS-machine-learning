@@ -151,7 +151,39 @@ $$
 T_{a} = \left\{ \frac{a_{i} + a_{i+1}}{2} \big| 1 \leq i \leq n-1 \right\}
 $$
 
-Note that since we are computing midpoints, the cardinality of $T_{a}$  is equal to $n-1$.  a_{*} then becomes the value a_{i} that maximizes our selection criterion (Gain, Gain Ratio, Gini Index).
+Note that since we are computing midpoints, the cardinality of $T_{a}$  is equal to $n-1$.  $a_{*}$ then becomes the value $a_{i}$ that maximizes our selection criterion (Gain, Gain Ratio, Gini Index).
+
 ### Missing Values
+There are two problems that occur when we have missing values:
+1. How do we choose which features to split when examples have missing values for features?
+2. When a split is made, how do we classify examples with missing values?
+
+To answer question one, we need to create weights to focus on the examples without missing values.  For some feature, $a$, with possible values $\{ a^{1}, a^{2}, \ldots, a^{v} \}$, let $\overset{\sim}{D}$ bet the set of examples in a dataset, $D$, that do not have missing values for feature $a$.  Let $\overset{\sim}{D^{v}}$ be the set of examples in $\overset{\sim}{D}$, taking on value $a^{v}$.  Finally, let $\overset{\sim}{D_{k}}$ denote the set of examples in $\overset{\sim}{D}$ that belong to the $k^{th}$ class for $k = 1, 2, \ldots, |\mathcal{y}|$.   Then $\overset{\sim}{D} = \bigcup_{k=1}^{|\mathcal{y}|}{\overset{\sim}{D_{k}}}$ and $\overset{\sim}{D} = \bigcup_{v=1}^{V}{{\overset{\sim}{D^{v}}}}$.
+
+We will let $w_{x}$ denote the weight for an example.  $w_{x}$ is 1 for all examples in the beginning of the training process of a DT.  Then we will define the following
+
+$$
+\rho = \frac{\sum_{x \in \overset{\sim}{D}}w_{x}}{\sum_{x \in D}w_{x}} \qquad \text{Proportion of examples w/o missing values}
+$$
+$$
+\overset{\sim}{p}_{k} = \frac{\sum_{x \in \overset{\sim}{D}_{k}}w_{x}}{\sum_{x \in \overset{\sim}{D}w_{x}}} \qquad \text{Proportion of examples in the $k^{th}$ class}
+$$
+$$
+\overset{\sim}{r}_{v} = \frac{\sum_{x \in \overset{\sim}{D^{v}}}w_{x}}{\sum_{x \in \overset{\sim}{D}w_{x}}} \qquad \text{Proportion of examples taking feature value $a^{v}$}
+$$
+
+We can rewrite the selection criterion using the above.  If we take information gain as an example
+
+$$
+Gain(D, a) = \rho \cdot Gain(\overset{\sim}{D}, a) = \rho \cdot \left( Ent(\overset{\sim}{D}) - \sum_{v = 1}^{V}{\overset{\sim}{r}_{v} Ent \big( \overset{\sim}{D^{v}}\big) } \right)
+$$
+
+where
+
+$$
+Ent(\overset{\sim}{D}) = -\sum_{k=1}^{|\mathcal{y}|}\overset{\sim}{p} \log_{2}{\overset{\sim}{p}_{k}}
+$$
+
+
 
 ## Multivariate Decision Trees

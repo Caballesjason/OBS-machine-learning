@@ -1,0 +1,1 @@
+A random forest is a type of [[Ensemble Method Overview]|ensemble method]]
