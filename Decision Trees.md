@@ -142,4 +142,16 @@ When post-pruning, the entire tree is trained, then branches are pruned if the m
 While post-pruning is less susceptible to underfitting and typically generalizes a DT better than pre-pruning, it is also more computationally expensive since it must first train the model, then traverse the tree in a bottom-up fashion.
 
 ## Continuous and Missing Values
+ ### Continuous Features
+  When handling a continuous value $a$, we must select a value of $a$, $a_{*}$, to split the data.  How do we choose $a_{*}$?
+  
+  In order to choose $a_{*}$, we first order all values of $a$.  Next, we compute their midpoint for each consecutive value in $a$,.  Mathematically, we write
+
+$$
+T_{a} = \left\{ \frac{a_{i} + a_{i+1}}{2} \big| 1 \leq i \leq n-1 \right\}
+$$
+
+Note that since we are computing midpoints, the cardinality of $T_{a}$  is equal to $n-1$.  a_{*} then becomes the value a_{i} that maximizes our selection criterion (Gain, Gain Ratio, Gini Index).
+### Missing Values
+
 ## Multivariate Decision Trees
